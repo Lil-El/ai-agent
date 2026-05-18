@@ -12,3 +12,4 @@ packages:
   - '5.es'
   - '6.neo4j'
   - '7.langsmith'
+  - '8.docker'
