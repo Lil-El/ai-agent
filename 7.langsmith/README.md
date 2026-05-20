@@ -11,3 +11,12 @@ RAG 评估：
 ## Milvus
 
 使用的版本是 v3.0，支持新增集合字段等功能。之前使用的是 v2.6。
+
+## Run
+
+1. npm run milvus:insert 插入数据
+  1. npm run milvus:index 修改索引
+  2. npm run milvus:query 查询数据
+2. npm run agent 查询多条问题
+3. npm run sm:dataset 上传数据集
+4. npm run sm:eval 评估任务

@@ -5,8 +5,8 @@
   "scripts": {
     "docker:up": "docker compose up -d",
     "milvus:insert": "node ./src/1.milvus-insert.mjs",
-    "milvus:alter-index": "node ./src/1.1.milvus-index.mjs",
-    "milvus:query": "node ./src/1.2.milvus-query.mjs",
+    "milvus:index": "node ./src/milvus/1.milvus-index.mjs",
+    "milvus:query": "node ./src/milvus/2.milvus-query.mjs",
     "agent": "node ./src/3.cli.mjs",
     "sm:dataset": "node ./src/eval/build_dataset.mjs",
     "sm:eval": "node ./src/eval/run_eval.mjs",
