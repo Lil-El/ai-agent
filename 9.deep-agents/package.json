@@ -1,0 +1,21 @@
+{
+  "name": "9.deep-agents",
+  "version": "1.0.0",
+  "description": "LangChain 是给你一堆 AI 开发积木，LangGraph 是搭建复杂工作流的底层蓝图，那 DeepAgents 就是提前搭好主体结构的半成品房子。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/langgraph": "^1.3.2",
+    "@langchain/openai": "^1.4.7",
+    "crypto": "^1.0.1",
+    "deepagents": "^1.10.2",
+    "dotenv": "^17.4.2",
+    "langchain": "^1.4.2",
+    "zod": "^4.4.3"
+  }
+}
