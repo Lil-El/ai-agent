@@ -32,6 +32,30 @@ importers:
 
   1.agent-learn/tool: {}
 
+  10.guardrails:
+    dependencies:
+      '@langchain/langgraph':
+        specifier: ^1.3.2
+        version: 1.3.2(@langchain/core@1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))(zod-to-json-schema@3.25.2(zod@4.4.3))(zod@4.4.3)
+      '@langchain/ollama':
+        specifier: ^1.2.7
+        version: 1.2.7(@langchain/core@1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))
+      '@langchain/openai':
+        specifier: ^1.4.7
+        version: 1.4.7(@langchain/core@1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))(ws@8.20.0)
+      deepagents:
+        specifier: ^1.10.2
+        version: 1.10.2(@opentelemetry/api@1.9.1)(langsmith@0.7.1(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)(zod-to-json-schema@3.25.2(zod@4.4.3))
+      dotenv:
+        specifier: ^17.4.2
+        version: 17.4.2
+      langchain:
+        specifier: ^1.4.2
+        version: 1.4.2(@langchain/core@1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)(zod-to-json-schema@3.25.2(zod@4.4.3))
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
+
   4.agentic-rag:
     dependencies:
       '@langchain/community':
@@ -1455,6 +1479,12 @@ packages:
     peerDependenciesMeta:
       zod-to-json-schema:
         optional: true
+
+  '@langchain/ollama@1.2.7':
+    resolution: {integrity: sha512-7Gu17q1dn4nKGB3ZYJyaaL8H/2k7LHvcL6V25S8cVDniTTSvd0fWzI5MzPJvbf9WPxBhvmf+rDDLAhOWljHEtQ==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@langchain/core': ^1.0.0
 
   '@langchain/openai@1.4.5':
     resolution: {integrity: sha512-bQ2WMIZfSh02trJLYSAtiIcD3j6EBCiAm9nw0dZWQsVaUxmWc3JJqs8uUte6AkMazmLHzcUIw+14UkXO5fRJvQ==}
@@ -4043,6 +4073,9 @@ packages:
     resolution: {integrity: sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew==}
     engines: {node: '>= 0.4'}
 
+  ollama@0.6.3:
+    resolution: {integrity: sha512-KEWEhIqE5wtfzEIZbDCLH51VFZ6Z3ZSa6sIOg/E/tBV8S51flyqBOXi+bRxlOYKDf8i327zG9eSTb8IJxvm3Zg==}
+
   on-finished@2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
     engines: {node: '>= 0.8'}
@@ -4987,6 +5020,9 @@ packages:
     peerDependenciesMeta:
       webpack-cli:
         optional: true
+
+  whatwg-fetch@3.6.20:
+    resolution: {integrity: sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg==}
 
   whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
@@ -6777,6 +6813,11 @@ snapshots:
       - svelte
       - vue
 
+  '@langchain/ollama@1.2.7(@langchain/core@1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))':
+    dependencies:
+      '@langchain/core': 1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)
+      ollama: 0.6.3
+
   '@langchain/openai@1.4.5(@langchain/core@1.1.45(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@5.2.4)(zod@4.4.3))(ws@5.2.4))(ws@5.2.4)':
     dependencies:
       '@langchain/core': 1.1.45(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@5.2.4)(zod@4.4.3))(ws@5.2.4)
@@ -8343,7 +8384,7 @@ snapshots:
     dependencies:
       '@langchain/core': 1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)
       '@langchain/langgraph': 1.3.2(@langchain/core@1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))(zod-to-json-schema@3.25.2(zod@4.4.3))(zod@4.4.3)
-      '@langchain/langgraph-sdk': 1.9.1(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)
+      '@langchain/langgraph-sdk': 1.9.5(@langchain/core@1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))
       fast-glob: 3.3.3
       langchain: 1.4.2(@langchain/core@1.1.46(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)(zod-to-json-schema@3.25.2(zod@4.4.3))
       langsmith: 0.7.1(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)
@@ -9809,6 +9850,10 @@ snapshots:
 
   object-inspect@1.13.4: {}
 
+  ollama@0.6.3:
+    dependencies:
+      whatwg-fetch: 3.6.20
+
   on-finished@2.4.1:
     dependencies:
       ee-first: 1.1.1
@@ -10816,6 +10861,8 @@ snapshots:
       - lightningcss
       - postcss
       - uglify-js
+
+  whatwg-fetch@3.6.20: {}
 
   whatwg-url@5.0.0:
     dependencies:
