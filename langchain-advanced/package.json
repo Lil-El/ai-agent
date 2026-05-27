@@ -1,11 +1,9 @@
 {
-  "name": "10.guardrails",
+  "name": "langchain-advanced",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pii": "node ./pii.mjs",
-    "hitl": "node ./hitl.mjs"
   },
   "keywords": [],
   "author": "",
