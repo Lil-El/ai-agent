@@ -6,6 +6,7 @@ packages:
   - 'tools/*'
   - 'shared/*'
   - 'langchain-advanced'
+  - 'deep-research-assistant'
   - '1.agent-learn/*'
   - '2.nest-agent/*'
   - '3.nest-agent-agui/*'
