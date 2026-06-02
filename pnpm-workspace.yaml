@@ -16,3 +16,4 @@ packages:
   - '7.langsmith'
   - '8.docker'
   - '9.deep-agents'
+  - '10.redis'

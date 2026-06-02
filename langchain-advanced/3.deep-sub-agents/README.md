@@ -1,0 +1,1 @@
+> deep-research-assistant 简化版，使用其相关的中间件和工具等

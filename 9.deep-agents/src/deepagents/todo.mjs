@@ -3,7 +3,7 @@ import { ChatOpenAI } from "@langchain/openai";
 import { createAgent, HumanMessage, todoListMiddleware } from "langchain";
 
 const model = new ChatOpenAI({
-  model: process.env.OPENAI_MODEL,
+  model: process.env.MODEL_NAME,
   apiKey: process.env.OPENAI_API_KEY,
   temperature: 0,
   configuration: {
