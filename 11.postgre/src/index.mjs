@@ -84,14 +84,14 @@ async function run() {
     }
   }
 
-  console.log("\n=== 清理 ===");
+  // console.log("\n=== 清理 ===");
 
-  await messages.deleteMessage(assistantMessage.id);
-  await messages.deleteMessage(updatedMessage.id);
-  await conversations.deleteConversation(conversation.id);
-  await users.deleteUser(user.id);
+  // await messages.deleteMessage(assistantMessage.id);
+  // await messages.deleteMessage(updatedMessage.id);
+  // await conversations.deleteConversation(conversation.id);
+  // await users.deleteUser(user.id);
 
-  console.log("演示数据已清理");
+  // console.log("演示数据已清理");
 }
 
 run()
