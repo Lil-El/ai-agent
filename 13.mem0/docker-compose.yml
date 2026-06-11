@@ -1,0 +1,20 @@
+services:
+  # Redis
+  redis:
+    image: redis:7-alpine
+    container_name: 13.mem0-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - ${DOCKER_VOLUME_DIRECTORY:-.}/volumes/redis:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+networks:
+  default:
+    name: common-network

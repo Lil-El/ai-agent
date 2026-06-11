@@ -17,3 +17,6 @@ packages:
   - '8.docker'
   - '9.deep-agents'
   - '10.redis'
+  - '11.postgre'
+  - '12.nest-pg'
+  - '13.mem0'

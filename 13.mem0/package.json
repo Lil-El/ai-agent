@@ -1,0 +1,23 @@
+{
+  "name": "13.mem0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "docker:up": "docker compose up -d",
+    "agent": "node src/3.redis-mem0-agent.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@langchain/core": "^1.1.48",
+    "@langchain/ollama": "^1.2.7",
+    "dotenv": "^17.4.2",
+    "ioredis": "^5.11.0",
+    "langchain": "^1.4.2",
+    "mem0ai": "^3.0.7",
+    "zod": "^4.4.3"
+  }
+}
