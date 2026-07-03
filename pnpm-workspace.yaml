@@ -21,3 +21,4 @@ packages:
   - '11.postgre'
   - '12.nest-pg'
   - '13.mem0'
+  - '14.ali-oss'
