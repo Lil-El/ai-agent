@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  rustfs:
+    image: rustfs/rustfs:latest
+    container_name: rustfs-server
+    restart: always
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      TZ: Asia/Shanghai
+      RUSTFS_ACCESS_KEY: admin
+      RUSTFS_SECRET_KEY: Admin@123456
+      RUSTFS_CONSOLE_ENABLE: "true"
+    volumes:
+      - ./volumes/rustfs-data:/data
+      - ./volumes/rustfs-logs:/logs
