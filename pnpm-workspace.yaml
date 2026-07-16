@@ -22,3 +22,4 @@ packages:
   - '12.nest-pg'
   - '13.mem0'
   - '14.oss'
+  - '15.multi-modal'

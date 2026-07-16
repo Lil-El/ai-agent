@@ -225,6 +225,24 @@ importers:
         specifier: ^8.0.7
         version: 8.0.7
 
+  15.multi-modal:
+    dependencies:
+      '@langchain/core':
+        specifier: ^1.2.3
+        version: 1.2.3(@opentelemetry/api@1.9.1)(openai@6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)
+      '@langchain/openai':
+        specifier: ^1.5.5
+        version: 1.5.5(@aws-sdk/credential-provider-node@3.972.62)(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(openai@6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))(@smithy/signature-v4@5.6.2)(ws@8.20.0)
+      ali-oss:
+        specifier: ^6.23.0
+        version: 6.23.0
+      dashscope-sdk-official:
+        specifier: ^1.26.0
+        version: 1.26.0
+      dotenv:
+        specifier: ^17.4.2
+        version: 17.4.2
+
   4.agentic-rag:
     dependencies:
       '@langchain/community':
@@ -519,6 +537,8 @@ importers:
       zod:
         specifier: ^4.4.3
         version: 4.4.3
+
+  mouse-control: {}
 
   nest-advanced:
     dependencies:
@@ -1913,6 +1933,10 @@ packages:
     resolution: {integrity: sha512-fQU6Guyb1pwc2fEplmA8FPbKfOMAofjnyJzExevro0FxEiuGHE18Ov/ZHmT9trWCDTZRI9eW1VIc6aChxV8pAQ==}
     engines: {node: '>=20'}
 
+  '@langchain/core@1.2.3':
+    resolution: {integrity: sha512-F+L5SsciykwDl7eDxacnhDTcWe1IF6jetzfkvI5PPfq6ogWHO7xcjU90SGh/3lqbbS0tgun+qF01KIqxawrCsA==}
+    engines: {node: '>=20'}
+
   '@langchain/langgraph-checkpoint@1.0.2':
     resolution: {integrity: sha512-F4E5Tr0nt8FGghgdscJtHw+ABzChOHeI80R7Y1pjIHdiJom6c2ieo76vL+FWiny80JmoGqhrVAEIWrw0cXKPxg==}
     engines: {node: '>=18'}
@@ -2028,6 +2052,12 @@ packages:
     engines: {node: '>=20'}
     peerDependencies:
       '@langchain/core': ^1.1.48
+
+  '@langchain/openai@1.5.5':
+    resolution: {integrity: sha512-wX7dwb9z4nf5FHXlIl/X2mk08pzonvRHCt1D4+s1zXLP0duYDC95j7dulPIQJ6fmhbyYQc9Ki8mEhY/D1lB8kw==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@langchain/core': ^1.2.2
 
   '@langchain/protocol@0.0.15':
     resolution: {integrity: sha512-MllvbpMjqHevUm+v94M422mH7XKN+wGCvJRBVROTWBotEDOATYB4Ktk2UheYP859y9o2LlhtPek5t1T9eyfAbQ==}
@@ -3580,6 +3610,10 @@ packages:
   crypto@1.0.1:
     resolution: {integrity: sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==}
     deprecated: This package is no longer supported. It's now a built-in Node module. If you've depended on crypto, you should switch to the one that's built-in.
+
+  dashscope-sdk-official@1.26.0:
+    resolution: {integrity: sha512-mFgBKrQzvAyeAE/vWMjIApSLB1sJQmxUsBFgXJU1DtbKV20nwyf4hWDyvhV9UnMnemquf2eOlXkQ0XON/H6pDw==}
+    engines: {node: '>=18.0.0'}
 
   data-uri-to-buffer@4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
@@ -5208,6 +5242,26 @@ packages:
       ws: ^8.18.0
       zod: ^3.25 || ^4.0
     peerDependenciesMeta:
+      ws:
+        optional: true
+      zod:
+        optional: true
+
+  openai@6.47.0:
+    resolution: {integrity: sha512-xYr+R9woSzWxVxeiqkkNbHhv89tZDEI6eBMbrdPnv3poh+mijHvbhS35a+3o6xHa411/ns8j5ENY3So9DCXWYw==}
+    peerDependencies:
+      '@aws-sdk/credential-provider-node': '>=3.972.0 <4'
+      '@smithy/hash-node': '>=4.3.0 <5'
+      '@smithy/signature-v4': '>=5.4.0 <6'
+      ws: ^8.18.0
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      '@aws-sdk/credential-provider-node':
+        optional: true
+      '@smithy/hash-node':
+        optional: true
+      '@smithy/signature-v4':
+        optional: true
       ws:
         optional: true
       zod:
@@ -8446,6 +8500,22 @@ snapshots:
       - openai
       - ws
 
+  '@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(openai@6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)':
+    dependencies:
+      '@cfworker/json-schema': 4.1.1
+      '@standard-schema/spec': 1.1.0
+      js-tiktoken: 1.0.21
+      langsmith: 0.7.1(@opentelemetry/api@1.9.1)(openai@6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)
+      mustache: 4.2.0
+      p-queue: 6.6.2
+      zod: 4.4.3
+    transitivePeerDependencies:
+      - '@opentelemetry/api'
+      - '@opentelemetry/exporter-trace-otlp-proto'
+      - '@opentelemetry/sdk-trace-base'
+      - openai
+      - ws
+
   '@langchain/langgraph-checkpoint@1.0.2(@langchain/core@1.1.45(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@5.2.4)(zod@4.4.3))(ws@5.2.4))':
     dependencies:
       '@langchain/core': 1.1.45(@opentelemetry/api@1.9.1)(openai@6.37.0(ws@5.2.4)(zod@4.4.3))(ws@5.2.4)
@@ -8716,6 +8786,18 @@ snapshots:
       openai: 6.37.0(ws@8.20.0)(zod@4.4.3)
       zod: 4.4.3
     transitivePeerDependencies:
+      - ws
+
+  '@langchain/openai@1.5.5(@aws-sdk/credential-provider-node@3.972.62)(@langchain/core@1.2.3(@opentelemetry/api@1.9.1)(openai@6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3))(ws@8.20.0))(@smithy/signature-v4@5.6.2)(ws@8.20.0)':
+    dependencies:
+      '@langchain/core': 1.2.3(@opentelemetry/api@1.9.1)(openai@6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3))(ws@8.20.0)
+      js-tiktoken: 1.0.21
+      openai: 6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3)
+      zod: 4.4.3
+    transitivePeerDependencies:
+      - '@aws-sdk/credential-provider-node'
+      - '@smithy/hash-node'
+      - '@smithy/signature-v4'
       - ws
 
   '@langchain/protocol@0.0.15': {}
@@ -10122,7 +10204,7 @@ snapshots:
 
   axios@1.17.0:
     dependencies:
-      follow-redirects: 1.16.0(debug@4.3.4)
+      follow-redirects: 1.16.0
       form-data: 4.0.5
       https-proxy-agent: 5.0.1
       proxy-from-env: 2.1.0
@@ -10516,6 +10598,16 @@ snapshots:
   crypt@0.0.2: {}
 
   crypto@1.0.1: {}
+
+  dashscope-sdk-official@1.26.0:
+    dependencies:
+      axios: 1.17.0
+      ws: 8.20.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
 
   data-uri-to-buffer@4.0.1: {}
 
@@ -11013,6 +11105,8 @@ snapshots:
   flatted@3.4.2: {}
 
   fn.name@1.1.0: {}
+
+  follow-redirects@1.16.0: {}
 
   follow-redirects@1.16.0(debug@4.3.4):
     optionalDependencies:
@@ -11972,6 +12066,14 @@ snapshots:
       openai: 6.37.0(ws@8.20.0)(zod@4.4.3)
       ws: 8.20.0
 
+  langsmith@0.7.1(@opentelemetry/api@1.9.1)(openai@6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3))(ws@8.20.0):
+    dependencies:
+      p-queue: 6.6.2
+    optionalDependencies:
+      '@opentelemetry/api': 1.9.1
+      openai: 6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3)
+      ws: 8.20.0
+
   leac@0.6.0: {}
 
   leven@3.1.0: {}
@@ -12423,6 +12525,13 @@ snapshots:
 
   openai@6.37.0(ws@8.20.0)(zod@4.4.3):
     optionalDependencies:
+      ws: 8.20.0
+      zod: 4.4.3
+
+  openai@6.47.0(@aws-sdk/credential-provider-node@3.972.62)(@smithy/signature-v4@5.6.2)(ws@8.20.0)(zod@4.4.3):
+    optionalDependencies:
+      '@aws-sdk/credential-provider-node': 3.972.62
+      '@smithy/signature-v4': 5.6.2
       ws: 8.20.0
       zod: 4.4.3
 
