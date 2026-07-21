@@ -8,6 +8,7 @@ packages:
   - 'langchain-advanced'
   - 'nest-advanced'
   - 'deep-research-assistant'
+  - 'knowledge-hub-backend'
   - '1.agent-learn/*'
   - '2.nest-agent/*'
   - '3.nest-agent-agui/*'
