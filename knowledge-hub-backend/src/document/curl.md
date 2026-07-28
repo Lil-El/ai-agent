@@ -71,3 +71,18 @@ curl -s -X DELETE "http://localhost:3000/documents/${DOC_ID}" | jq
 ---
 
 未安装 `jq` 时去掉 `| jq` 即可。
+
+## 6. 上传文件解析
+
+```bash
+curl -s -X POST http://localhost:3000/documents/upload/parse \
+  -F 'file=@./申论总结课.pptx' \
+  -F 'authorId=10001' \
+  -F 'createBy=10001' | jq
+```
+
+## 7. 解析结果查询
+
+```bash
+curl -s -X GET "http://localhost:3000/documents/parse/${DOC_ID}" | jq
+```
